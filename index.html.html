@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Petición de San Valentín</title>
+	<style>
+		body {
+			background-color: #ff69b4;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		.contenedor {
+			width: 300px;
+			margin: 100px auto;
+			background-color: #ffffff;
+			padding: 20px;
+			border: 1px solid #cccccc;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		}
+		.boton {
+			background-color: #ff69b4;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.boton:hover {
+			background-color: #ff99cc;
+		}
+		.emoji {
+			font-size: 50px;
+			animation: animacion 2s infinite;
+		}
+		@keyframes animacion {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<h3><marquee> De: Armandito🫶🏻
+ Para: Mi Novia(Tú)😍
+</h3></marquee>
+		<h2>Amorcito, ¿Aceptas ser mi San Valentín?❤🥹
+</h2>
+		<button class="boton" onclick="mostrarSi()">Sí</button>
+		<button class="boton" onclick="mostrarNo()">No</button>
+		<div id="respuesta" style="display: none;"></div>
+	</div>
+
+	<script>
+		function mostrarSi() {
+			document.getElementById("respuesta").innerHTML = '<span class="emoji">&#x1F60D;</span><br>Yo sabía que me ibas aceptar la solicitud mi cielito. Por eso, espera un pequeño detalle que estoy preparando para tí.';
+			document.getElementById("respuesta").style.display = "block";
+		}
+
+		function mostrarNo() {
+			document.getElementById("respuesta").innerHTML = '<span class="emoji">&#x1F622;</span><br> ¡Auch! No esperaba que me rechazaras la solicitud. Estoy triste por tu decisión.';
+			document.getElementById("respuesta").style.display = "block";
+		}
+	</script>
+</body>
+</html>
